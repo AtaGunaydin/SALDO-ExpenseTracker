@@ -1,85 +1,44 @@
- # Saldo - Smart Expense Management App
+# Enough
+_It's enough to make a man go crazy_
+<br><br>
+[![Hits](https://hits.sh/github.com/tingirifistik/Enough-Reborn.svg?label=views&color=007ec6)](https://hits.sh/github.com/tingirifistik/Enough-Reborn/)
 
-Welcome to the Saldo app! This guide will help you set up the project on your local machine.
-
-## 🌟 Overview
-
-Saldo is a cutting-edge expense management application designed to simplify the way you handle shared expenses. Whether you're managing household bills, planning a group trip, or splitting costs with roommates, Saldo makes it effortless and efficient. With its intuitive interface and robust features, Saldo ensures that you stay on top of your finances with ease.
-
-### Why Saldo?
-
-- **Effortless Expense Tracking**: Automatically split bills and track expenses in real-time.
-- **Smart Notifications**: Stay informed with timely alerts about new expenses, payments, and reminders.
-- **Secure and Reliable**: Built with top-notch security features to protect your data and ensure privacy.
-- **User-Friendly Interface**: Designed with simplicity in mind, making it accessible for everyone.
-
-## 📦 Repository
-
-Clone the repository to your local machine:
+<img src=https://github.com/tingirifistik/Enough-Reborn/assets/51286195/fc10a910-b4a4-4ff2-8058-62767b9af30f height="200px" width="400px"/>
+<img src=https://user-images.githubusercontent.com/51286195/209442235-7069b8e7-b3f3-4b70-82cb-a86014836be0.png height="200px" width="400px"/>
 
 
-## 🛠 Backend Setup
+<h2>Kurulum</h2>
 
-1. **Create and activate a virtual environment:**
+```console
+git clone https://github.com/tingirifistik/Enough-Reborn.git
+cd Enough-Reborn
+pip3 install -r requirements.txt
+python3 enough.py
+```
 
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate  # For Windows: .venv\Scripts\activate
-   ```
 
-2. **Install backend dependencies:**
+<h2>Discord Bot</h2>
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Bot'un çalışabilmesi için 'Privileged Gateway Intents' seçeneklerinin hepsinin aktif olması gerekmektedir.
 
-3. **Setup MySQL Database:**
+<h2>Discord Selfbot</h2>
 
-   ```bash
-   mysql -u root -p
-   ```
+**Token bulma:**
 
-   - Enter your MySQL password when prompted.
-   - Create the database:
+1- Tarayıcıdan bot olarak kullanacağınız Discord hesabına giriniz.<br>
+2- Tarayıcı konsolunu açınız.<br>
+3- Ağ trafiği izleme bölümüne geliniz.<br>
+4- Konsolu kapatmadan, Discord'da bu oturum boyunca tıklamadığınız bir sohbete tıklayınız.<br>
+5- Sonu *messages?limit=50* ile biten isteğe tıklayınız.<br>
+6- İsteğin *Header* kısmındaki *Authorization* değeri sizin token'ınızdır.<br>
+7- Bu token'ı *discord-selfbot-enough.py*'de *token* kısmına yazınız. (str olarak)<br>
 
-     ```sql
-     CREATE DATABASE finance_tracker;
-     ```
+**Chat Id Bulma:**
 
-   - Copy and paste the contents of `tables.sql` into the MySQL console.
-
-4. **Create a `.env` file in the backend directory with:**
-
-   ```plaintext
-   DB_HOST=localhost
-   DB_USER=your_mysql_username
-   DB_PASSWORD=your_mysql_password
-   DB_NAME=finance_tracker
-   JWT_SECRET=your_secret_key
-   ```
-
-5. **Start the backend server:**
-
-   ```bash
-   python -m backend.app
-   ```
-
-## 🌐 Frontend Setup
-
-1. **Navigate to the frontend directory:**
-
-   ```bash
-   cd frontend
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start the frontend:**
-
-   ```bash
-   npm start
-   ```
+1- Bot hesabı ile mesajlaşacağınız kendi orijinal hesabınızdan bot'a bir tane mesaj atınız.<br>
+2- Tarayıcıda Discord'u açın ve bot hesabına giriş yapınız, ardından gerçek hesabınızın üzerine tıklayın.<br>
+3- Url'deki *@me*'den sonraki sayı sizin sohbet id'nizdir.<br>
+4- Bu id'yi *discord-selfbot-enough.py*'de *chat_id* kısmına yazınız. (int olarak)<br><br>
+**Not:** Eğer bot'u Discord sunucusunda kullanacaksanız, *channels*'dan sonra gelen, taksim ile ayrılmış iki sayıdan ikincisi sohbet id'nizdir.
+<br><br>
+<a href="https://www.buymeacoffee.com/tingirifistik" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
